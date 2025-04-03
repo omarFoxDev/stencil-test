@@ -5,5 +5,5 @@ before: "// hygen:new:component_demo:template:vue"
 ---
     {
       name: '<%=name%>',
-      component: () => (<<%=componentDomName%>-demo />)
+      component: '<%=componentDomName%>-demo'
     },<% -%>

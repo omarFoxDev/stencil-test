@@ -11,19 +11,19 @@ type UIComponentType = {
 
 function <%=name%>Demo() {
   const <%=name%>Ref = useRef<UIComponentType | null>(null);
-  const [<%=name%>ValidationMessage, set<%=name%>ValidationMessage] = useState<unknown>() 
+  const [<%=name%>ValidationMessage, set<%=name%>ValidationMessage] = useState('') 
 
   return (
     <>
-      <div><<%=name%> name='<%=name%>' ref={ <%=name%>Ref } /></div>
-      <div>Validation Message: { JSON.stringify(<%=name%>ValidationMessage) || '' } </div>
+      <div><<%=name%> name='test' ref={ <%=name%>Ref } /></div>
+      <div>Validation Message: { <%=name%>ValidationMessage } </div>
       <div>
         <button onClick={() => { 
             <%=name%>Ref.current?.validate()
-            .then((validation: unknown) => {
-              set<%=name%>ValidationMessage(validation)
-            })
-            .catch((error) => console.error('Validation Error:', error))
+              .then((validation: unknown) => {
+                set<%=name%>ValidationMessage(JSON.stringify(validation) || '')
+              })
+              .catch((error) => console.error('Validation Error:', error))
             }}>
           Validate
         </button>

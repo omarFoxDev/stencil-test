@@ -23,7 +23,7 @@ export class <%=name%> {
   @Prop() disabled: boolean;
   @Prop() required: boolean;
   @Prop() save_only: boolean;
-  @Prop() tabIndex: number;
+  @Prop() tab_index: number;
 
   /* Mutable Props */
   @Prop({ mutable: true }) validations: validationType[]
