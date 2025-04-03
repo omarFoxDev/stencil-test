@@ -1,0 +1,32 @@
+{
+  "name": "@placid/react",
+  "version": "0.0.1",
+  "description": "React wrapper for Stencil component library",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/components.js",
+      "types": "./dist/components.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.7.3"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@placid/core": "workspace:*",
+    "@stencil/react-output-target": "^0.8.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

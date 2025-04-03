@@ -1,0 +1,30 @@
+{
+  "name": "@placid/vue",
+  "sideEffects": false,
+  "version": "0.0.1",
+  "private": true,
+  "description": "Vue specific wrapper for Stencil component library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/ionic.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "module": "./dist/index.js",
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vue": "^3.4.38"
+  },
+  "dependencies": {
+    "@placid/core": "workspace:*",
+    "@stencil/vue-output-target": "^0.10.1"
+  }
+}
